@@ -12,7 +12,13 @@ public class Account {
             boolean stillTaken = true;
             long suffixNum = 1;
             while (stillTaken) {
-                
+                if (isAvailable(requestedName + suffixNum)) {
+                    username = requestedName + suffixNum;
+                    stillTaken = false;
+                }
+                else {
+                    suffixNum++;
+                }
             }
         }
     }
