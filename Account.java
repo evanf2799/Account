@@ -33,4 +33,7 @@ public class Account {
         s.close();
         return true;
     }
+    public String getUsername() {
+        return username;
+    }
 }
