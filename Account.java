@@ -26,9 +26,10 @@ public class Account {
         File f = new File("usernames.txt");
         java.util.Scanner s = new Scanner(f);
         while (s.hasNextLine()) {
-            if (s.nextLine().equals(str))
+            if (s.nextLine().equals(str)) {
                 s.close();
                 return false;
+            }
         }
         s.close();
         return true;
