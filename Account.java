@@ -37,4 +37,13 @@ public class Account {
     public String getUsername() {
         return username;
     }
+    public String getShortenedName() {
+        String shortName = username;
+        int hyphen = shortName.indexOf("-");
+        while (hyphen > 0) {
+            shortName = shortName.substring(0, hyphen - 1) + shortName.substring(hyphen + 1);
+            hyphen = shortName.indexOf("-");
+        }
+        return shortName;
+    }
 }
